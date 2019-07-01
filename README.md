@@ -2,10 +2,6 @@
 
 Deep learning app made for pig lung CT segmentation using ANTsRNet/ANTsPyNet
 
-## Citation
-
-* __Nicholas J. Tustison__, Brian B. Avants, Zixuan Lin, Xue Feng, Nicholas Cullen, Jaime F. Mata, Lucia Flors, James C. Gee, Talissa A. Altes, John P. Mugler III, and Kun Qing.  Convolutional Neural Networks with Template-Based Data Augmentation for Functional Lung Image Quantification, _Academic Radiology_. [(pubmed)](https://www.ncbi.nlm.nih.gov/pubmed/30195415)
-
 ## Model training notes
 
 * Training data: 80 pig lung CT images
