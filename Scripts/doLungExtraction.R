@@ -39,13 +39,13 @@ unetModel <- createUnetModel3D( c( resampledImageSize, channelSize ),
 
 cat( "Loading weights file" )
 startTime <- Sys.time()
-weightsFileName <- "/Users/ntustison/Pkg/ANTsRNetApps/PigLungSegmentation/Data/Weights/pigLungExtractionWeights.h5"
+weightsFileName <- paste0( getwd(), "/pigLungExtractionWeights.h5" )
 if( ! file.exists( weightsFileName ) )
   {
   stop( "Weights file does not exist.\n" )
   # weightsFileName <- getPretrainedNetwork( "pigLungExtraction", weightsFileName )
   }
-load_model_weights_hdf5( unetModel, filepath = weightsFileName )
+unetModel$load_weights( weightsFileName )
 endTime <- Sys.time()
 elapsedTime <- endTime - startTime
 cat( "  (elapsed time:", elapsedTime, "seconds)\n" )
